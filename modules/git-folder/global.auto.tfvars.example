@@ -1,0 +1,12 @@
+# Sanitized template. Terraform auto-loads local global.auto.tfvars, not this file.
+# The real global.auto.tfvars is Git-ignored; do not force-add it.
+workspace_host           = "https://dbc-da1e1cda-7f18.cloud.databricks.com"
+databricks_client_id     = "<databricks-application-id>"
+databricks_client_secret = "<databricks-oauth-secret>"
+git_url                  = "https://github.com/Nerdy-Thanos/databricks_git_artifactory.git"
+git_provider             = "gitHub"
+git_branch               = "<approved-branch>"
+git_folder_path          = "/Workspace/Users/<approved-owner>/git-artifactory"
+tenant_reader_group      = "<approved-tenant-reader-group>"
+
+# Never put real secrets in this example or paste them in chat.

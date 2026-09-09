@@ -1,0 +1,35 @@
+# Databricks OAuth M2M authentication for the designated workspace-owning pipeline.
+workspace_host           = "https://WORKSPACE_HOST"
+databricks_client_id     = "DATABRICKS_CLIENT_ID"
+databricks_client_secret = "DATABRICKS_CLIENT_SECRET"
+
+# The designated workspace-owning tenant pipeline creates the fixed scope once.
+create_scope = true
+
+# Metadata-only default: no package credentials are written by Terraform.
+manage_secret_values = false
+index_url            = null
+
+configure_extra_indexes = false
+extra_index_urls        = []
+
+configure_ca_certificate = false
+ca_certificate_pem       = null
+
+# Complete credential-bearing URL shape (encode reserved username/token characters):
+# index_url = "https://ENCODED_USERNAME:ENCODED_TOKEN@HOST/artifactory/api/pypi/REPOSITORY/simple/"
+#
+# Optional extra indexes use the same complete HTTPS URL form. Terraform joins them
+# with a single space when writing pip-extra-index-urls.
+# extra_index_urls = [
+#   "https://ENCODED_USERNAME:ENCODED_TOKEN@HOST/artifactory/api/pypi/REPOSITORY/simple/",
+# ]
+#
+# Replace the null value above with the actual trusted certificate PEM content,
+# using a multiline heredoc if needed. Do not use file() in a .tfvars file.
+# The following is syntax only, not a usable certificate:
+# ca_certificate_pem = <<-PEM
+# -----BEGIN CERTIFICATE-----
+# REPLACE_WITH_REAL_APPROVED_CERTIFICATE_CONTENT
+# -----END CERTIFICATE-----
+# PEM

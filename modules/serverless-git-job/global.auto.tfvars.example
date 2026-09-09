@@ -1,0 +1,17 @@
+# Sanitized template. Terraform auto-loads local global.auto.tfvars, not this file.
+# The real global.auto.tfvars is Git-ignored; do not force-add it.
+workspace_host                 = "https://dbc-da1e1cda-7f18.cloud.databricks.com"
+databricks_client_id           = "<databricks-application-id>"
+databricks_client_secret       = "<databricks-oauth-secret>"
+job_name                       = "<approved-job-name>"
+git_url                        = "https://github.com/Nerdy-Thanos/databricks_git_artifactory.git"
+git_provider                   = "gitHub"
+git_commit                     = "<approved-full-40-character-commit-sha>"
+python_file                    = "workloads/git_smoke.py"
+task_key                       = "main"
+serverless_environment_version = "<approved-serverless-environment-version>"
+tenant_runner_group            = "<approved-tenant-runner-group>"
+dependencies                   = []
+
+# The script must be committed and pushed before selecting its full commit SHA.
+# Never put real secrets in this example or paste them in chat.
